@@ -1,0 +1,36 @@
+/* Fontes embutidas no site (licença SIL OFL 1.1, gratuitas).
+   Só o conjunto latino, que cobre o português. Sem chamadas ao Google Fonts:
+   o site funciona sem internet e não envia dados dos visitantes a terceiros. */
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url('../assets/fonts/inter-latin-wght-normal.woff2') format('woff2-variations'),
+       url('../assets/fonts/inter-latin-wght-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Fustat';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: url('../assets/fonts/fustat-latin-600-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Fustat';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url('../assets/fonts/fustat-latin-700-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Fustat';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 800;
+  src: url('../assets/fonts/fustat-latin-800-normal.woff2') format('woff2');
+}
