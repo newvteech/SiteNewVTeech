@@ -89,10 +89,19 @@ a { color: inherit; }
   display: grid; grid-template-columns: 1fr 1.1fr; align-items: center; gap: 16px;
   padding: 130px 6vw 80px;
 }
+/* as nuvens pequenas ocupam a largura da tela inteira (não só os 1600px do conteúdo),
+   e somem aos poucos nas laterais e embaixo, sem cortes retos */
 .cloud-sky {
-  position: absolute; inset: 0; z-index: 0; pointer-events: none;
-  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 75%, transparent 100%);
-  mask-image: linear-gradient(to bottom, #000 0%, #000 75%, transparent 100%);
+  position: absolute; top: 0; bottom: 0; left: 50%; width: 100vw; transform: translateX(-50%);
+  z-index: 0; pointer-events: none;
+  -webkit-mask-image:
+    linear-gradient(to bottom, #000 0%, #000 75%, transparent 100%),
+    linear-gradient(to right, transparent 0%, #000 6%, #000 94%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to bottom, #000 0%, #000 75%, transparent 100%),
+    linear-gradient(to right, transparent 0%, #000 6%, #000 94%, transparent 100%);
+  mask-composite: intersect;
 }
 .cloud-sky canvas { width: 100% !important; height: 100% !important; display: block; }
 .hero-copy { position: relative; z-index: 3; will-change: transform, opacity; }
